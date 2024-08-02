@@ -1,0 +1,277 @@
+/* 清除周圍margin(上右下左著順序設定) */
+body {
+    margin: 0;
+    font-family: 'Microsoft JhengHei', sans-serif;
+}
+
+.banner img {
+    width: 100%;
+}
+
+/* 文字區塊樣式 */
+.text {
+    /* 輔助框線 */
+    border: 2pt solid rgba(255, 0, 0, 0);
+    width: 1280px;
+    /* 自動水平置中 */
+    margin-left: auto;
+    margin-right: auto;
+    /* 啟動flexbox，子元素改成水平排列 */
+    display: flex;
+
+    /* 做出上下留白 */
+    padding-top: 64px;
+    padding-bottom: 64px;
+    /* 中間的gap方式一:給出gap的寬度 column-gap: 32px; */
+    /* 中間的gap方式二:平均分配 */
+    justify-content: space-between;
+    /* justify-content:space-around這個選項會左右增加留白空間 */
+
+}
+
+.text_box {
+    width: 405px;
+    background-color: rgba(127, 255, 212, 0);
+    row-gap: 8px;
+    /* 文字置中效果 */
+    text-align: center;
+    /* 做出左右留白距離 */
+    padding-left: 22px;
+    padding-right: 22px;
+
+}
+
+.text_box h2 {
+    text-align: left;
+    color: #CE1818;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 140%;
+    margin-bottom: 8px;
+
+}
+
+.text_box p {
+    margin-top: 0;
+    text-align: left;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 140%;
+}
+
+/* 標語區 */
+.slogan {
+    background-color: #CE1818;
+    text-align: center;
+    padding-top: 28px;
+    padding-bottom: 28px;
+}
+
+.slogan h2 {
+    color: #fff;
+    font-size: 32px;
+    margin: 0;
+}
+
+/* 卡片區 */
+.slo_word {
+    color: #60C1BC;
+    font-size: 40px;
+    line-height: 140%;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 14px;
+    "
+
+}
+
+.card_box {
+    width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    column-gap: 32px;
+    margin-bottom: 52px;
+}
+
+.card {
+    width: 33%;
+    /* border: solid 1px rgba(255, 0, 0, 0); */
+    /* box-shadow: x y blur(px要記得打) #00000042; */
+    box-shadow: 0 0 10px #00000042;
+    padding: 32px;
+    border-radius: 5px;
+
+}
+
+.card img {
+    width: 70%;
+    /* 圖片置中的方法 */
+    margin: auto;
+    display: block;
+}
+
+.card h3 {
+    font-size: 29px;
+    line-height: 140%;
+    font-family: 'Microsoft JhengHei', sans-serif;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    font-size: 17px;
+    line-height: 140%;
+    font-weight: 800;
+    font-family: 'Microsoft JhengHei', Arial, sans-serif;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.card span {
+    color: #CE1818;
+    font-size: 28px;
+    line-height: 140%;
+    font-weight: bolder
+}
+
+.card .p-price {
+    text-align: center;
+    margin: 20px;
+}
+
+/* 命名不要用既有物，不然容易出問題 */
+.buttonn a {
+    /* 外框樣式 */
+    background-color: #CE1818;
+    color: #fff;
+    display: block;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* 文字樣式 */
+    text-decoration: none;
+    font-size: 28px;
+    line-height: 140%;
+    font-weight: 600;
+    text-align: center;
+}
+
+.buttonn button {
+    /* 外框樣式，清除 */
+    background-color: #CE1818;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    /* 上下10 左右36 */
+    padding: 10px 36px;
+    /* 文字樣式 */
+    font-size: 28px;
+    line-height: 140%;
+    font-weight: 600;
+    text-align: center;
+
+}
+
+/* 處理按鈕位置 */
+.bt_place {
+    text-align: center;
+}
+
+/* hover時，變手掌、變色 */
+.buttonn button:hover,
+a:hover {
+    cursor: pointer;
+    background-color: #ac2121;
+}
+
+
+/* footer */
+.footer {
+    background-color: #858585;
+    width: 100%;
+    /* height: 100px; */
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-family: 'Microsoft JhengHei', Arial, sans-serif;
+
+}
+
+.footer p {
+    color: #fff;
+    font-size: 17px;
+    margin: 0;
+
+}
+
+@media (max-width:639px) {
+    #wrap {
+        /* border: solid, 1px, red; */
+        /* width: 375px; */
+        width: 100%;
+        margin: auto;
+    }
+
+
+
+    /* 文字區塊設定 */
+    .text {
+        /* border: #CE1818,solid.1px; */
+        width: 80%;
+        padding: 24px;
+        flex-direction: column;
+    }
+
+    .text_box {
+        /* border: #18aace,solid,1px; */
+        width: 80%;
+        margin: auto;
+    }
+
+    .text_box h2 {
+        /* border: #3cce18,solid,1px; */
+        text-align: center;
+        width: 100%;
+
+    }
+
+    /* 標語區 */
+    .slogan h2 {
+        font-size: 28px;
+    }
+
+
+    /* 卡片區 */
+    .slo_word {
+        font-size: 32px;
+        font-weight: bold;
+        margin-top: 20px;
+
+    }
+
+    .card_box {
+        flex-direction: column;
+        width: 100%;
+        row-gap: 20px;
+
+    }
+
+    .card {
+        width: 70%;
+        margin: auto;
+    }
+}
+
+
+@media (max-width:1325px) and (min-width:640px) {
+    .text {
+        width: 90%;
+    }
+
+    .card_box {
+        width: 90%;
+        column-gap: 16px;
+    }
+
+}
